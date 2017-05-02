@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('products/search', 'ProductController@search');
+
+Route::resource('products', 'ProductController');
+
+Route::resource('shopping-items', 'ShoppingItemController', [
+	'only' => ['index', 'create', 'store'],
+	'names' => [
+		'create' => 'shopping-items.add',
+	]
+]);

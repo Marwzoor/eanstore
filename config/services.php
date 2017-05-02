@@ -35,4 +35,10 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'wunderlist' => [
+        'token' => env('WUNDERLIST_TOKEN'),
+        'client_id' => env('WUNDERLIST_CLIENT_ID'),
+        'list_id' => env('WUNDERLIST_LIST_ID'),
+    ]
+
 ];
